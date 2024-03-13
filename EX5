@@ -1,0 +1,30 @@
+Claro, aqui está o mesmo programa em C#:
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Digite uma string para ser invertida: ");
+        string texto = Console.ReadLine();
+        string textoInvertido = InverterString(texto);
+        Console.WriteLine("String invertida: " + textoInvertido);
+    }
+
+    static string InverterString(string str)
+    {
+        char[] caracteres = str.ToCharArray();
+        int tamanho = caracteres.Length;
+        char[] caracteresInvertidos = new char[tamanho];
+
+        for (int i = 0; i < tamanho; i++)
+        {
+            caracteresInvertidos[i] = caracteres[tamanho - 1 - i];
+        }
+
+        return new string(caracteresInvertidos);
+    }
+}
+```
