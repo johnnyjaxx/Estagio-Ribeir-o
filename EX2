@@ -1,0 +1,34 @@
+
+```csharp
+using System;
+
+class Program
+{
+    static bool PertenceSequenciaFibonacci(int numero)
+    {
+        int a = 0, b = 1;
+        while (b < numero)
+        {
+            int temp = a;
+            a = b;
+            b = temp + b;
+        }
+        return b == numero;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.Write("Informe um número: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        if (PertenceSequenciaFibonacci(numero))
+        {
+            Console.WriteLine($"O número {numero} pertence à sequência de Fibonacci.");
+        }
+        else
+        {
+            Console.WriteLine($"O número {numero} não pertence à sequência de Fibonacci.");
+        }
+    }
+}
+```
